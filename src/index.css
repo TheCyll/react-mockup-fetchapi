@@ -42,7 +42,7 @@ body {
 }
 .search { 
   align-self: center; 
-  margin-top: 20px;
+  margin: 20px 0;
   color: var(--color-text);
 }
 .search input {  
@@ -92,7 +92,8 @@ body {
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: 0;
+  
 }
-
-
-
+.select { 
+  background:hsl(250, 80%, 20%);
+}
