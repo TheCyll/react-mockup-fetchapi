@@ -62,17 +62,20 @@ export const UsersTable = () => {
         }
       });
       
-      let completeUsersArr = usersData.map( user => {    
-        return {
-          userId: user.userId,
-          name: user.name,
-          username: user.username,
-          posts: posts[user.userId].posts,
-          titles: posts[user.userId].titles
-        }        
-      });  
-                
-      setcompleteUsers(completeUsersArr);        
+      if (Object.keys(posts).length > 0) {
+        let completeUsersArr = usersData.map( user => {    
+          return {
+            userId: user.userId,
+            name: user.name,
+            username: user.username,
+            posts: posts[user.userId].posts,
+            titles: posts[user.userId].titles
+          }        
+        }); 
+
+        setcompleteUsers(completeUsersArr);        
+
+      }      
       
     });  
 
